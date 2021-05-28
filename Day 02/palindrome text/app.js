@@ -1,3 +1,4 @@
+//using reverse function.
 function checkPalindrome(word) {
 
     // convert string to an array
@@ -18,5 +19,22 @@ function checkPalindrome(word) {
 }
 // program to check if the string is palindrome or not
 //(reverse word should be equal to the given word.)
-let text = 'noon';
-checkPalindrome(text);
+let text = 'NooN';
+// checkPalindrome(text);
+checkPalindrome2(text);
+
+
+// using algorithm
+function checkPalindrome2(word) {
+
+    for(let i=0; i<Math.floor(word.length/2);i++){
+        if(word[i] == word[word.length-1-i]) {
+            console.log('It is a palindrome word');
+            break;
+        }
+        else {
+            console.log('It is not a palindrome word');
+            break;
+        }
+    }
+}
