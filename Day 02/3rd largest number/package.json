@@ -1,0 +1,14 @@
+{
+  "name": "3rd-largest-number",
+  "version": "1.0.0",
+  "description": "3rd largest number from a array",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sadusha Nadeesh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

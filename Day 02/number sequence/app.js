@@ -15,5 +15,11 @@ function missingNumber(array) {
 
 
 //Write a program to find a missing number from the number sequence given.
-var array = [2, 4, 6, 3, 1, 9, 7, 8];
-console.log(missingNumber(array));
+// var array = [2, 4, 6, 3, 1, 9, 7, 8];
+// console.log(missingNumber(array));
+
+const findMissingNumber = (array) => {
+    return console.log(missingNumber(array));
+}
+
+module.exports = findMissingNumber;
