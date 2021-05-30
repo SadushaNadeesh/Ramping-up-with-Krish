@@ -1,4 +1,4 @@
-function count(text) {
+function countCharacters(text) {
     let textWithoutSpace = text.replace(/\s+/g, "").trim();
     let result = {};
 
@@ -11,11 +11,9 @@ function count(text) {
 
 
 // write a program to count and tell the number of repetition of each letter within the sentence given.
-// let text = "these days i am studying";
-// count(text);
-
-const countLetters = (text) => {
-    return count(text);
+const countLetters = () => {
+    let text = "these days i am studying";
+    return countCharacters(text);
 }
 
 module.exports = countLetters;
