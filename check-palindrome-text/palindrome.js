@@ -1,25 +1,22 @@
 // program to check if the string is palindrome or not
-//(reverse word should be equal to the given word.)
-// let text = 'NooN';
-// checkPalindrome(text);
+//The characters read the same backward as forward
 
-
-// using algorithm
 function checkPalindrome(word) {
+    isPalindrome = false;
 
-    for(let i=0; i<Math.floor(word.length/2);i++){
-        if(word[i] == word[word.length-1-i]) {
-            console.log('It is a palindrome word');
-            break;
+    for (let i = 0; i < Math.floor(word.length / 2); i++) {
+        if (word[i] == word[word.length - 1 - i]) {
+            isPalindrome = true;
         }
         else {
-            console.log('It is not a palindrome word');
-            break;
+            isPalindrome = false;
         }
     }
+    return isPalindrome ? console.log(word + " is a palindrome") : console.log(word + " is not a palindrome.");
 }
 
-const palindromeText = (text) => {
+const palindromeText = () => {
+    let text = 'nooooon';
     return checkPalindrome(text);
 }
 
@@ -27,11 +24,11 @@ module.exports = palindromeText;
 
 //method 2
 //using reverse function.
-// function checkPalindrome(word) {
+//function checkPalindrome(word) {
 
 //     // convert string to an array
 //     let wordArray = word.split('');
-    
+
 //     // reverse the array values
 //     let reverseArray = wordArray.reverse();
 
