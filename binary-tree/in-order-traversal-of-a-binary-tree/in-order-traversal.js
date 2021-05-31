@@ -75,7 +75,7 @@ class BST {
 
 }
 
-//write a program to print all leaf node of a binary tree where depth is greater than 10
+//write a program to demonstrate in order traversal
 const binaryTree = () => {
     const bst = new BST();
     bst.add(4);
