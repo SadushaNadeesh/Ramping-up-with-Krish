@@ -1,7 +1,7 @@
 {
-  "name": "binary-search",
+  "name": "print-all-leaf-nodes-of-a-binary-tree",
   "version": "1.0.0",
-  "description": "binary search",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"

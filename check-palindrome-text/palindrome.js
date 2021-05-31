@@ -16,7 +16,7 @@ function checkPalindrome(word) {
 }
 
 const palindromeText = () => {
-    let text = 'nooooon';
+    let text = 'noooon';
     return checkPalindrome(text);
 }
 
