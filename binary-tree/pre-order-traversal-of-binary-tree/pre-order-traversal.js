@@ -40,24 +40,6 @@ class BST {
         }
     }
 
-    //find minimum value
-    findMin() {
-        let current = this.root;
-        while (current.left !== null) {
-            current = current.left;
-        }
-        return current.data;
-    }
-
-    //find maximum value
-    findMax() {
-        let current = this.root;
-        while (current.right !== null) {
-            current = current.right;
-        }
-        return current.data;
-    }
-
     //pre order traversal
     preOrder(){
         if(this.root==null){
@@ -88,8 +70,6 @@ const binaryTree = () => {
     bst.add(7);
     bst.add(6);
 
-    console.log("minimum value: " + bst.findMin());
-    console.log("maximum value: " + bst.findMax());
     console.log("pre-order-traversal: " + bst.preOrder());
 }
 
