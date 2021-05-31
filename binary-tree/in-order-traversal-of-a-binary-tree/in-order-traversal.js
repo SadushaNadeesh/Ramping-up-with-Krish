@@ -57,6 +57,21 @@ class BST {
         }
         return current.data;
     }
+    //in order traversal
+    inOrder(){
+        if(this.root==null){
+            return null;
+        }else{
+            var result = new Array();
+            function traverseInOrder(node){
+                node.left && traverseInOrder(node.left);
+                result.push(node.data);
+                node.right && traverseInOrder(node.right);
+            };
+            traverseInOrder(this.root);
+            return result;
+        };
+    }
 
 }
 
@@ -74,6 +89,7 @@ const binaryTree = () => {
 
     console.log("minimum value: " + bst.findMin());
     console.log("maximum value: " + bst.findMax());
+    console.log("in-order-traversal: " + bst.inOrder());
 }
 
 module.exports = binaryTree;

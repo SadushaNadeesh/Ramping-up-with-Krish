@@ -58,6 +58,22 @@ class BST {
         return current.data;
     }
 
+    //pre order traversal
+    preOrder(){
+        if(this.root==null){
+            return null;
+        }else{
+            var result = new Array();
+            function traversePreOrder(node){
+                result.push(node.data);
+                node.left && traversePreOrder(node.left);
+                node.right && traversePreOrder(node.right);
+            };
+            traversePreOrder(this.root);
+            return result;
+        };
+    }
+
 }
 
 //write a program to print all leaf node of a binary tree where depth is greater than 10
@@ -74,6 +90,7 @@ const binaryTree = () => {
 
     console.log("minimum value: " + bst.findMin());
     console.log("maximum value: " + bst.findMax());
+    console.log("pre-order-traversal: " + bst.preOrder());
 }
 
 module.exports = binaryTree;
