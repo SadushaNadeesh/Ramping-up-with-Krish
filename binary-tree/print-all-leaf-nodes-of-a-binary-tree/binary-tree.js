@@ -6,7 +6,7 @@ class Node {
     }
 }
 
-class BST {
+class BT {
     constructor() {
         this.root = null;
     }
@@ -39,41 +39,30 @@ class BST {
             return searchTree(node);
         }
     }
-
-    //find minimum value
-    findMin() {
-        let current = this.root;
-        while (current.left !== null) {
-            current = current.left;
-        }
-        return current.data;
+    getRootNode() {
+        return this.root;
     }
 
-    //find maximum value
-    findMax() {
-        let current = this.root;
-        while (current.right !== null) {
-            current = current.right;
+    //print leaf
+    printLeafNodes(node) {
+        if (node != null) {
+            this.printLeafNodes(node.left);
+            if (node.left == null && node.right == null) {
+                console.log(node.data);
+            }
+            this.printLeafNodes(node.right);
         }
-        return current.data;
     }
-
 }
 
 //write a program to print all leaf node of a binary tree where depth is greater than 10
 const binaryTree = () => {
-    const bst = new BST();
-    bst.add(4);
-    bst.add(3);
-    bst.add(5);
-    bst.add(8);
-    bst.add(2);
-    bst.add(9);
-    bst.add(7);
-    bst.add(6);
-
-    console.log("minimum value: " + bst.findMin());
-    console.log("maximum value: " + bst.findMax());
+    const bt = new BT();
+    const nodeData = [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92];
+    for (let i = 0; i < nodeData.length; i++) {
+        bt.add(nodeData[i]);
+    }
+    const root = bt.getRootNode();
+    bt.printLeafNodes(root);
 }
-
 module.exports = binaryTree;
