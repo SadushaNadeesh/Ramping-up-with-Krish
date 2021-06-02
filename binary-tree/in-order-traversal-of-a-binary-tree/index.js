@@ -1,3 +1,3 @@
-const bst = require('./in-order-traversal');
+const binaryTree = require('./in-order-traversal');
 
-return bst();
+return binaryTree();

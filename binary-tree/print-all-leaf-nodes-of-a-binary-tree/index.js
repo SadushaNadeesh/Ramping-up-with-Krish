@@ -1,3 +1,3 @@
-const bst = require('./binary-tree');
+const binarytree = require('./binary-tree');
 
-return bst();
+return binarytree();

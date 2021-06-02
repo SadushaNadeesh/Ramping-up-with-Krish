@@ -6,7 +6,7 @@ class Node {
     }
 }
 
-class BST {
+class binarySearchTree {
     constructor() {
         this.root = null;
     }
@@ -41,12 +41,12 @@ class BST {
     }
 
     //pre order traversal
-    preOrder(){
-        if(this.root==null){
+    preOrder() {
+        if (this.root == null) {
             return null;
-        }else{
+        } else {
             var result = new Array();
-            function traversePreOrder(node){
+            function traversePreOrder(node) {
                 result.push(node.data);
                 node.left && traversePreOrder(node.left);
                 node.right && traversePreOrder(node.right);
@@ -60,17 +60,13 @@ class BST {
 
 //write a program to demonstrate pre order traversal.
 const binaryTree = () => {
-    const bst = new BST();
-    bst.add(4);
-    bst.add(3);
-    bst.add(5);
-    bst.add(8);
-    bst.add(2);
-    bst.add(9);
-    bst.add(7);
-    bst.add(6);
+    const binarysearchtree = new binarySearchTree();
+    const nodeData = [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92];
+    for (let i = 0; i < nodeData.length; i++) {
+        binarysearchtree.add(nodeData[i]);
+    }
 
-    console.log("pre-order-traversal: " + bst.preOrder());
+    console.log("pre-order-traversal: " + binarysearchtree.preOrder());
 }
 
 module.exports = binaryTree;

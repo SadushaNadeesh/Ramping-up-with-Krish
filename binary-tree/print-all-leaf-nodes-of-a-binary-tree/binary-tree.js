@@ -6,7 +6,7 @@ class Node {
     }
 }
 
-class BT {
+class binarySearchTree {
     constructor() {
         this.root = null;
     }
@@ -57,12 +57,12 @@ class BT {
 
 //write a program to print all leaf node of a binary tree where depth is greater than 10
 const binaryTree = () => {
-    const bt = new BT();
+    const binarysearchtree = new binarySearchTree();
     const nodeData = [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92];
     for (let i = 0; i < nodeData.length; i++) {
-        bt.add(nodeData[i]);
+        binarysearchtree.add(nodeData[i]);
     }
-    const root = bt.getRootNode();
-    bt.printLeafNodes(root);
+    const root = binarysearchtree.getRootNode();
+    binarysearchtree.printLeafNodes(root);
 }
 module.exports = binaryTree;
