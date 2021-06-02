@@ -10,6 +10,7 @@ export class AppComponent {
 
   private _inputNumber: number = 0;
   sumOfFibonacci: number = 0;
+  element:number =0;
   isNumber = false;
 
   set inputNumber(value: number) {
@@ -18,6 +19,7 @@ export class AppComponent {
       this._inputNumber = value;
     } else {
       this.isNumber = false;
+      this.element=0;
     }
   }
 
@@ -37,6 +39,8 @@ export class AppComponent {
       sum = num1 + num2;
       num1 = num2;
       num2 = sum;
+
+      this.element=sum;
       totalSum += sum;
       this.sumOfFibonacci = totalSum + 1;
     }

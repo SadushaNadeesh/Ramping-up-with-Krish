@@ -8,9 +8,12 @@
     </div>
   </div>
 
-  <div class="card-body">
+  <div class="card-body" *ngIf="isNumber">
     <div class="row">
-      <div class="col-md-12">Fibonacci series starting from 0,1 sum up to {{inputNUmber}}th element: &nbsp;&nbsp;<label *ngIf="isNumber">{{sumOfFibonacci}}</label></div>
+      <div class="col-md-12">Fibonacci series element {{inputNUmber}}: &nbsp;&nbsp;<label >{{element}}</label></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">Fibonacci series Total sum up to element {{inputNUmber}}: &nbsp;&nbsp;<label>{{sumOfFibonacci}}</label></div>
     </div>
   </div>
 
