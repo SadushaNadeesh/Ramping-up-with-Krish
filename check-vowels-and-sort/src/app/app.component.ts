@@ -26,9 +26,11 @@ export class AppComponent {
       }
     }
     if(this.result.length>0){
+      let removeDUplicates= new Set(this.result);
       this.isVowels = true;
       this.wordCount = this.text.length;
       this.vowelWords = this.result.length
+      console.log(removeDUplicates);
     }
     
   }

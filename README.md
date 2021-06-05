@@ -13,4 +13,6 @@ Day 05: Create an Angular app to demonstrate fibonacci series, generate sum of t
 
 Day 06: Create an Angular app to check for vowels and sort it from a given paragraph. 2021-06-03.
 
+Day 07: 2021-06-05.
+
 Fundamentals of the JavaScript, Angular, NgRX etc.
