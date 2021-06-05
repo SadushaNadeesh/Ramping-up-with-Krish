@@ -1,20 +1,3 @@
 <div class="card">
-  <div class="card-header">
-    {{title}}
-  </div>
-  <div class="card-body">
-    <div class="row">
-      <div class="col-md-10">Input a number:&nbsp;&nbsp;<input type="text" [(ngModel)]="inputNumber" /></div>
-    </div>
-  </div>
-
-  <div class="card-body" *ngIf="isNumber">
-    <div class="row">
-      <div class="col-md-12">Fibonacci series element {{inputNUmber}}: &nbsp;&nbsp;<label >{{element}}</label></div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">Fibonacci series Total sum up to element {{inputNUmber}}: &nbsp;&nbsp;<label>{{sumOfFibonacci}}</label></div>
-    </div>
-  </div>
-
+  <app-input></app-input>
 </div>
