@@ -1,0 +1,24 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">Async Assignment</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home">Home </a>
+      </li>
+      <li class="nav-item">
+        <a href="/anagram" class="nav-link" routerLink="anagram">Anagram Check</a>
+      </li>
+      <li class="nav-item" >
+        <a href="/repetition" class="nav-link" routerLink="repetition">Repetition Count</a>
+      </li>
+      <li class="nav-item">
+        <a href="/largest-number" class="nav-link" routerLink="largest-number">Largest Number</a>
+      </li>
+    </ul>
+
+  </nav>
+
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>
+</div>
