@@ -1,1 +1,24 @@
-<p>largest-number works!</p>
+<div style="width: auto; margin: auto;">
+    <h1>Find the largest number for a given element of the array</h1>
+    <div class="submit-form">
+        <div>
+            <div class="form-group">
+                <label for="text">Enter Array</label>
+                <input type="text" class="form-control" id="text" required [(ngModel)]="form.text" name="text" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="element">Element to be checked</label>
+                <input class="form-control" id="element" required [(ngModel)]="form.element" name="element" />
+            </div>
+            <br>
+            <button (click)="checkLargestNumber()" class="btn btn-success">Check for largest number</button>
+        </div>
+
+        <!-- <div *ngIf="submitted">
+          <h4>You submitted successfully!</h4>
+          <button class="btn btn-success" (click)="newTutorial()">Add</button>
+        </div> -->
+    </div>
+</div>
