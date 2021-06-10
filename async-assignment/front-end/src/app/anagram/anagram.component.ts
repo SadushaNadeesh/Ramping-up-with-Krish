@@ -11,12 +11,13 @@ export class AnagramComponent implements OnInit {
     text1: null,
     text2: null
   };
+  received = false;
+  output:any = '';
 
   constructor(private service: BackEndService) { }
 
-  ngOnInit(): void {
-    // this.checkAnagram("sam","mas");
-  }
+  ngOnInit(): void {}
+
   checkAnagram(): void {
 
     const { text1, text2 } = this.form;
@@ -25,6 +26,8 @@ export class AnagramComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
+          this.received = true;
+          this.output = response.result;
         },
         error => {
           console.log(error);

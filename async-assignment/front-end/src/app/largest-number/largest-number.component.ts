@@ -11,14 +11,13 @@ export class LargestNumberComponent implements OnInit {
     text1: null,
     text2: null
   };
+  received = false;
+  output: any = '';
 
   constructor(private service: BackEndService) { }
 
-  ngOnInit(): void {
-    // const array = [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92];
-    // const element = 3;
-    // this.checkLargestNumber(array,element);
-  }
+  ngOnInit(): void {}
+  
   checkLargestNumber(): void {
 
     const { text, element } = this.form;
@@ -28,6 +27,8 @@ export class LargestNumberComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
+          this.received = true;
+          this.output = response;
         },
         error => {
           console.log(error);

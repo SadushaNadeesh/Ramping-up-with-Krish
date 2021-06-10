@@ -16,9 +16,9 @@
             <button (click)="checkLargestNumber()" class="btn btn-success">Check for largest number</button>
         </div>
 
-        <!-- <div *ngIf="submitted">
-          <h4>You submitted successfully!</h4>
-          <button class="btn btn-success" (click)="newTutorial()">Add</button>
-        </div> -->
+        <div *ngIf="received">
+            <h4>Number checked successfully!</h4>
+            <p>{{output}}</p>
+        </div>
     </div>
 </div>

@@ -11,13 +11,13 @@ export class RepetitionComponent implements OnInit {
   form: any = {
     text: null
   };
+  received = false;
+  output: any;
 
   constructor(private service: BackEndService) { }
 
-  ngOnInit(): void {
-    // let text = "these days i am studying";
-    // this.checkRepetitions(text)
-  }
+  ngOnInit(): void {}
+  
   checkRepetitions(): void {
 
     const { text } = this.form;
@@ -26,6 +26,8 @@ export class RepetitionComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
+          this.received = true;
+          this.output = response.result;
         },
         error => {
           console.log(error);
