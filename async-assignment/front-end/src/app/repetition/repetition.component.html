@@ -12,7 +12,20 @@
 
         <div *ngIf="received">
             <h4>Repetition checked successfully!</h4>
-            <p>{{output}}</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Letter</th>
+                        <th>Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let letter of output; index as i">
+                        <td>{{letter[0]}}</td>
+                        <td>{{letter[1]}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

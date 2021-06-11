@@ -12,7 +12,7 @@ export class RepetitionComponent implements OnInit {
     text: null
   };
   received = false;
-  output: any;
+  output: any[]=[];
 
   constructor(private service: BackEndService) { }
 
@@ -25,7 +25,7 @@ export class RepetitionComponent implements OnInit {
     this.service.checkRepetitions(text)
       .subscribe(
         response => {
-          console.log(response);
+          console.log(response.result);
           this.received = true;
           this.output = response.result;
         },
