@@ -10,7 +10,7 @@ export class AnagramController {
         @Body('text1') text1: string,
         @Body('text2') text2: string) {
 
-        const result = this.anagramService.compareWords(text1, text2);
+        const result = this.anagramService.compareWords(text1, text2,this.anagramService.result);
         return {
             statusCode: HttpStatus.OK,
             message: 'Anagram checked successfully',

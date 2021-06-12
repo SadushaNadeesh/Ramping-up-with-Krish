@@ -12,6 +12,7 @@ export class AnagramComponent implements OnInit {
     text2: null
   };
   received = false;
+  words:any = '';
   output:any = '';
 
   constructor(private service: BackEndService) { }
@@ -21,6 +22,7 @@ export class AnagramComponent implements OnInit {
   checkAnagram(): void {
 
     const { text1, text2 } = this.form;
+    this.words = text1 +" and "+text2;
 
     this.service.checkAnagram(text1, text2)
       .subscribe(

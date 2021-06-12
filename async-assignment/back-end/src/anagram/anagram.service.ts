@@ -2,32 +2,41 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AnagramService {
+    t1 = [];
+    t2 = [];
+    isAnagram = false;
 
-    compareWords(text1, text2) {
+    //callback
+    compareWords(text1, text2, callback) {
 
-        let t1 = text1.split("").sort();
-        let t2 = text2.split("").sort();
-        let isAnagram = false;
-        let output:string='';
+        this.t1 = text1.split("").sort();
+        this.t2 = text2.split("").sort();
 
-        if (t1.length === t2.length) {
-            if (JSON.stringify(t1) === JSON.stringify(t2)) {
-                isAnagram = true;
+        if (this.t1.length === this.t2.length) {
+            if (JSON.stringify(this.t1) === JSON.stringify(this.t2)) {
+                this.isAnagram = true;
             } else {
-                isAnagram = false;
+                this.isAnagram = false;
             }
         }
         else {
-            isAnagram = false;
+            this.isAnagram = false;
         }
 
-        if(isAnagram){
-            output =text1 + " and " + text2 + " are anagram words";
-        }else{
-            output =text1 + " and " + text2 + " are not anagram words";
+        return callback(this.isAnagram);
+    }
+
+    result(isAnagram) {
+        
+        let output: string = '';
+        if (isAnagram) {
+            output = "are anagram words";
+        } else {
+            output = "are not anagram words";
         }
-        // const output = isAnagram ? console.log(text1 + " and " + text2 + " are anagram words") : console.log(text1 + " and " + text2 + " are not anagram words.");
+        // let output = isAnagram ? console.log(text1 + " and " + text2 + " are anagram words") : console.log(text1 + " and " + text2 + " are not anagram words.");
         return output;
+
     }
 
 }
