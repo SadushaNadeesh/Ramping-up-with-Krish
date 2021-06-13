@@ -4,6 +4,7 @@ import { resolve } from 'path';
 @Injectable()
 export class LargestNumberService {
 
+    //Promise implementation
     largestnumber(array: any, element: any) {
 
         return new Promise((resolve, reject) => {
@@ -22,7 +23,6 @@ export class LargestNumberService {
 
         arr.sort(function (a, b) { return a - b });
 
-        //check duplicates.
         arr.forEach(function (element, index) {
 
             if (arr.indexOf(element) === index) {

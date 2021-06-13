@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class RepetitionCountService {
-
+    //Async-await implementation
     async countCharacters(text) {
         try {
             //method 1 using object converted to array later. (This will waste resources)
@@ -12,7 +12,7 @@ export class RepetitionCountService {
             for (let str of letterArray) {
                 result[str] = result.hasOwnProperty(str) ? result[str] + 1 : 1;
             }
-            var output = Object.keys(result).map((key) => [String(key), result[key]]);
+            var output =await Object.keys(result).map((key) => [String(key), result[key]]);
 
             return [...output];
 
