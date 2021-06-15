@@ -15,4 +15,6 @@ Day 06: Create an Angular app to check for vowels and sort it from a given parag
 
 Day 07: Create a web app using Angular and nestJs to implement callback,promises and async functions. 2021-06-07.
 
+Day 08: Create a web app for a pet-clinic using Angular, nestJs. 2021-06-15.
+
 Fundamentals of the JavaScript, Angular, NgRX etc.
