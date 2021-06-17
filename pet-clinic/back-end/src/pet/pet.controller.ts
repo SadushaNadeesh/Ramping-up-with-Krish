@@ -53,7 +53,7 @@ export class PetController {
     async deletePet(@Param('id') id: number) {
         const pet = await this.petService.destroy(id);
         return {
-            statusCode: HttpStatus.NO_CONTENT,
+            statusCode: HttpStatus.OK,
             message: 'pet deleted successfully',
             pet
         };

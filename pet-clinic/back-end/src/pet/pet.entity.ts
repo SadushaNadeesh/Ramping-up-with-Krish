@@ -15,13 +15,13 @@ export class Pet extends BaseEntity {
     breed: string;
 
     @Column()
-    age: string;
+    age: number;
 
     @Column()
-    color: Date;
+    color: string;
 
     @Column()
-    sex: string;
+    gender: string;
 
     @Column()
     status: string;

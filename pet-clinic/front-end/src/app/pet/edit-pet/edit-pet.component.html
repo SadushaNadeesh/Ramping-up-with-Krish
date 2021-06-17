@@ -1,1 +1,46 @@
-<p>edit-pet works!</p>
+<div style="width: 400px; margin: auto;">
+  <div *ngIf="currentPet" class="edit-form">
+    <h4>Edit Pet Details</h4>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="currentPet.name" name="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="type">Type</label>
+        <input class="form-control" id="type" required [(ngModel)]="currentPet.type" name="type" />
+      </div>
+
+      <div class="form-group">
+        <label for="breed">Breed</label>
+        <input class="form-control" id="breed" required [(ngModel)]="currentPet.breed" name="breed" />
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input class="form-control" id="age" required [(ngModel)]="currentPet.age" name="age" />
+      </div>
+
+      <div class="form-group">
+        <label for="color">Color</label>
+        <input class="form-control" id="color" required [(ngModel)]="currentPet.color" name="color" />
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <input class="form-control" id="gender" required [(ngModel)]="currentPet.gender" name="gender" />
+      </div>
+    </form>
+    <br>
+    <button type="submit" class="btn btn-sm btn-info" (click)="updatePet()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentPet">
+    <br />
+    <p>Cannot access this Pet...</p>
+  </div>
+</div>

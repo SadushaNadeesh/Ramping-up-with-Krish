@@ -6,6 +6,9 @@ import { CreatePetComponent } from './create-pet/create-pet.component';
 import { EditPetComponent } from './edit-pet/edit-pet.component';
 import { PetsComponent } from './pets/pets.component';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { PetsComponent } from './pets/pets.component';
   ],
   imports: [
     CommonModule,
-    PetRoutingModule
+    PetRoutingModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class PetModule { }

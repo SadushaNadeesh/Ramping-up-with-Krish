@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { OwnersRoutingModule } from './owners-routing.module';
 import { OwnersComponent } from './owners.component';
 
 
@@ -10,8 +9,10 @@ import { OwnersComponent } from './owners.component';
     OwnersComponent
   ],
   imports: [
-    CommonModule,
-    OwnersRoutingModule
+    CommonModule
+  ],
+  exports: [
+    OwnersComponent
   ]
 })
 export class OwnersModule { }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PetService } from 'src/app/_services/pet.service';
 
 @Component({
   selector: 'app-pets',
@@ -6,10 +8,45 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pets.component.scss']
 })
 export class PetsComponent implements OnInit {
+  pets: any[] = [];
 
-  constructor() { }
+  constructor(private router: Router, private petService: PetService) { }
 
   ngOnInit(): void {
+    this.loadAllPets();
+  }
+
+  loadAllPets(): void {
+    this.petService.getAll()
+      .subscribe(
+        data => {
+          this.pets = data.pet;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  refreshList(): void {
+    this.loadAllPets();
+  }
+
+  addNew() {
+    this.router.navigateByUrl('/create-pet');
+  }
+
+  deletePet(id:any): void {
+    this.petService.delete(id)
+      .subscribe(
+        response => {
+          console.log(response);
+          // this.router.navigate(['/pets']);
+          this.loadAllPets();
+        },
+        error => {
+          console.log(error);
+        });
   }
 
 }
