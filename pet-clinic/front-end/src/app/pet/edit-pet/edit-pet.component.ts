@@ -25,7 +25,7 @@ export class EditPetComponent implements OnInit {
     this.petService.get(id)
       .subscribe(
         data => {
-          this.currentPet = data.pet;
+          this.currentPet = data;
           console.log(data);
         },
         error => {

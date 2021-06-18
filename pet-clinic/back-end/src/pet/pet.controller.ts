@@ -9,53 +9,34 @@ export class PetController {
     @Get('pets')
     async showAllPets() {
 
-        const pet = await this.petService.showAll();
-        return {
-            statusCode: HttpStatus.OK,
-            message: 'pets fetched successfully',
-            pet
-        };
+        return await this.petService.showAll();
+        
+        // const pets = await this.petService.showAll();
+        // return {
+        //     statusCode: HttpStatus.OK,
+        //     message: 'pets fetched successfully',
+        //     pets
+        // };
     }
 
     @Post('pet')
     async createPet(@Body() data: Pet) {
-        const pet = await this.petService.create(data);
-        return {
-            statusCode: HttpStatus.OK,
-            message: 'pet created successfully',
-            pet
-        };
+        return await this.petService.create(data);
     }
 
     @Get('pet/:id')
     async readPet(@Param('id') id: number) {
-
-        const pet = await this.petService.read(id);
-        return {
-            statusCode: HttpStatus.OK,
-            message: 'pet fetched successfully',
-            pet
-        };
+        return await this.petService.read(id);
     }
 
 
     @Patch('pet/:id')
     async updatePet(@Param('id') id: number, @Body() data: Partial<Pet>) {
-        const pet = await this.petService.update(id, data);
-        return {
-            statusCode: HttpStatus.OK,
-            message: 'pet updated successfully',
-            pet
-        };
+        return await this.petService.update(id, data);
     }
 
     @Delete('pet/:id')
     async deletePet(@Param('id') id: number) {
-        const pet = await this.petService.destroy(id);
-        return {
-            statusCode: HttpStatus.OK,
-            message: 'pet deleted successfully',
-            pet
-        };
+        return await this.petService.destroy(id);
     }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Pet } from 'src/app/model/pet';
 import { PetService } from 'src/app/_services/pet.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class PetsComponent implements OnInit {
     this.petService.getAll()
       .subscribe(
         data => {
-          this.pets = data.pet;
+          this.pets = data;
           console.log(data);
         },
         error => {
