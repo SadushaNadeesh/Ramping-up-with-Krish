@@ -1,0 +1,15 @@
+2021-06-18
+
+1) Explain Partial in typeScript
+Partial<Type>
+When we want to be dynamic and not be committed to the entire interface, but still get IntelliSense we can use Partial, the opposit of Required<Type>.
+
+This will constructs a type with all properties of Type set to optional. This utility will return a type that represents all subsets of a given type.
+
+2) The differance between BrowserModule and CommonModule.
+The root application module, AppModule, imports BrowserModule so that it can have all the services that are essential to launch and run a browser app.
+
+Components in the AppModule also need to have access to the Angular directive(Arrtibute Directive, Structural Directive) such as *ngIf, *ngFor and *ngSwitch etc. and these directive are available in CommonModule which is automatically exported by the BrowserModule. This is why we have access to the directives in the components defined in AppModule.
+
+Only root application module, AppModule , should import BrowserModule and all other feature module should import CommonModule because we only need the Angular directives in feature module and not the services that are required to launch the app(Which are already available in RootModule).
+
