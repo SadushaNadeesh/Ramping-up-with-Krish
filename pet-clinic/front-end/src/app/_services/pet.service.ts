@@ -28,7 +28,7 @@ export class PetService {
     return this.http.patch<Pet>(`${baseUrl}/${id}`, data);
   }
 
-  delete(id: any): Observable<Pet> {
+  delete(id: any): Observable<any> {
     return this.http.delete<Pet>(`${baseUrl}/${id}`);
   }
 

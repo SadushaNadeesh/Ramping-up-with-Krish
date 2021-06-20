@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, HttpStatus, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post } from '@nestjs/common';
 import { Pet } from './pet.entity';
 import { PetService } from './pet.service';
 
@@ -8,15 +8,7 @@ export class PetController {
 
     @Get('pets')
     async showAllPets() {
-
         return await this.petService.showAll();
-        
-        // const pets = await this.petService.showAll();
-        // return {
-        //     statusCode: HttpStatus.OK,
-        //     message: 'pets fetched successfully',
-        //     pets
-        // };
     }
 
     @Post('pet')
@@ -37,6 +29,12 @@ export class PetController {
 
     @Delete('pet/:id')
     async deletePet(@Param('id') id: number) {
-        return await this.petService.destroy(id);
+        const pets = await this.petService.destroy(id);
+
+        return {
+            statusCode: HttpStatus.NO_CONTENT,
+            message: 'pets fetched successfully',
+            pets
+        };
     }
 }

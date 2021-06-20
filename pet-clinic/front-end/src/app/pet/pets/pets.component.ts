@@ -37,13 +37,15 @@ export class PetsComponent implements OnInit {
     this.router.navigateByUrl('/create-pet');
   }
 
-  deletePet(id:any): void {
+  deletePet(id: any): void {
     this.petService.delete(id)
       .subscribe(
         response => {
-          console.log(response);
-          // this.router.navigate(['/pets']);
-          this.loadAllPets();
+
+          if (response.statusCode === 204) {
+            this.loadAllPets();
+          }
+
         },
         error => {
           console.log(error);
