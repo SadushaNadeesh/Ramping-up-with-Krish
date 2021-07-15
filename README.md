@@ -17,6 +17,4 @@ Day 07: Create a web app using Angular and nestJs to implement callback,promises
 
 Day 08: Create a web app for a pet-clinic using Angular, nestJs. 2021-06-15.
 
-Day 09: RAPID Assignment. 2021-06-20.
-
-Fundamentals of the JavaScript, Angular, NgRX etc.
+Day 09: RAPID Assignment / Ramp up project. 2021-06-20.
