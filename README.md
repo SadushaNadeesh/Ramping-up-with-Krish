@@ -1,4 +1,4 @@
-Fast track With Krish.
+Ramping up with Krish.
 
 Day 01: Algorithms. 2021-05-24.
 
